@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Search Author</title>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <header>
+            <img src="../assets/logo.png" style='width: 60px;'>
+            <h1>Starry Reading Tracker</h1>
+            <img src="../assets/logo.png" style='width: 60px;'>
+        </header>
+        <nav>
+            <a href="homepage.html">Home |</a>
+            <a href="author.html">Search Author |</a>
+            <a href="finduser.html">Find User |</a>
+            <a href="readinglist.html">Reading List |</a>
+            <a href="doneread.html">Done Read |</a>
+            <a href="profile.html">My Profile |</a>
+            <a href="#" onclick="logout()">Logout</a>
+        </nav>
+        <main>
+            <div class="box">
+                <h2>Search Author</h2>
+                <p>Search your favorite author here !</p><br>
+                <input type="text" id="authorName" placeholder="Type author name" style="width: 60%; padding: 5px;">
+                <button id="searchBtn">Search</button><br><br>
+            </div>
+            <div id="authorsList" class="container"></div>
+        </main>
+        <script src="../js/user.js"></script>
+        <script src="../js/author.js"></script>
+    </body>
+    <footer>
+        <p>&copy; 2025 Starry Reading Tracker | @starryread@gmail.com</p>
+    </footer>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Login</title>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <header>
+            <img src="../assets/logo.png" style='width: 60px;'>
+            <h1>Starry Reading Tracker</h1>
+            <img src="../assets/logo.png" style='width: 60px;'>
+        </header>
+        <main style="flex: 1; min-height: 50vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <div class="box">
+                <h2>Log In</h2><br>
+                <table>
+                    <tr>
+                        <th><label>Username: </label></th>
+                        <td><input type="text" id="username" placeholder="Username"><br><br></td>
+                    </tr>
+                    <tr>
+                        <th><label>Password: </label></th>
+                        <td><input type="password" id="password" placeholder="Password"><br><br></td>
+                    </tr>
+                </table>
+                <button id="loginBtn" style="width:80px;">Log In</button><br><br>
+                <p>Dont't have an account? <a href="signup.html">Sign Up</a></p>
+            </div>
+        </main>
+        <script src="../js/user.js"></script>
+        <script>
+        document.getElementById('loginBtn').addEventListener('click',()=>{
+            const username=document.getElementById('username').value;
+            const password=document.getElementById('password').value;
+            if (!username.trim() || !password.trim()){
+                alert("Please enter both username and password.");
+                return;
+            }
+            if (login(username,password)){
+                alert('Login successful!');
+                window.location.href='homepage.html';
+            } else{
+                alert('Wrong username or password.');
+            }
+        });
+        </script>
+    </body>
+    <footer>
+        <p>&copy; 2025 Starry Reading Tracker | @starryread@gmail.com</p>
+    </footer>
+</html>

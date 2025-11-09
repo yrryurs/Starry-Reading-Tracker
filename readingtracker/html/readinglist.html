@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Reading List</title>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <header>
+            <img src="../assets/logo.png" style='width: 60px;'>
+            <h1>Starry Reading Tracker</h1>
+            <img src="../assets/logo.png" style='width: 60px;'>
+        </header>
+        <nav>
+            <a href="homepage.html">Home |</a>
+            <a href="author.html">Search Author |</a>
+            <a href="finduser.html">Find User |</a>
+            <a href="readinglist.html">Reading List |</a>
+            <a href="doneread.html">Done Read |</a>
+            <a href="profile.html">My Profile |</a>
+            <a href="#" onclick="logout()">Logout</a>
+        </nav>
+        <main>
+            <div id="readingListContainer" style="display:flex; flex-wrap:wrap; gap:10px;"></div>
+            <div class="box">
+                <p><i>☆ Where stories and dreams align ☆</i></p>
+            </div>
+        </main>
+        <script src="../js/user.js"></script>
+        <script src="../js/readinglist.js"></script>
+    </body>
+    <footer>
+        <p>&copy; 2025 Starry Reading Tracker | @starryread@gmail.com</p>
+    </footer>
+</html>
