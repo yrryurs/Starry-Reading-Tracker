@@ -24,6 +24,7 @@ async function displayBookDetail(book){
     const publishYear=editionData.publish_date?.match(/\d{4}/)?.[0] || 'N/A';
     const totalPages=editionData.number_of_pages || 'N/A';
     const availableOnline=editionData.ocaid ? '✅ Yes' : '❌ No';
+    const editionName=editionData.edition_name || editionData.title || 'N/A';
     const coverImg=book.covers?.[0] 
         ? `https://covers.openlibrary.org/b/id/${book.covers[0]}-L.jpg` 
         : '../assets/nocover.png';
@@ -34,6 +35,7 @@ async function displayBookDetail(book){
         <h2>${book.title}</h2><br>
         <img src="${coverImg}" alt="${book.title}" style="width:80px; height:120px; object-fit: contain; margin-bottom:8px;">
         <p><b>Author:</b> ${book.authorName}</p>
+        <p><b>Edition:</b> ${editionName}</p>
         <p><b>Published Year:</b> ${publishYear}</p>
         <p><b>Total Pages:</b> ${totalPages}</p>
         <p><b>Available Online:</b> ${availableOnline}</p>
