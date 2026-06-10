@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Homepage</title>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <header>
+            <img src="../assets/logo.png" style='width: 60px;'>
+            <h1>Starry Reading Tracker</h1>
+            <img src="../assets/logo.png" style='width: 60px;'>
+        </header>
+        <nav>
+            <a href="homepage.html">Home |</a>
+            <a href="author.html">Search Author |</a>
+            <a href="finduser.html">Find User |</a>
+            <a href="readinglist.html">Reading List |</a>
+            <a href="doneread.html">Done Read |</a>
+            <a href="profile.html">My Profile |</a>
+            <a href="#" onclick="logout()">Logout</a>
+        </nav>
+        <main>
+            <div class="box">
+                <h3>Hello, <span id="username"></span> !</h3>
+                <h2>☆ Welcome to Starry Reading Tracker ☆</h2><br>
+                <p><i>"Track your book journey here, where stories and dreams align."</i></p>
+            </div>
+            <div class="button-container">
+		        <a class="button" href="readinglist.html"><img src="../assets/readinglist.png" style="width: 130px; vertical-align: middle; margin-right: 10px;">Reading<br>List</a>
+		        <a class="button" href="doneread.html"><img src="../assets/doneread.png" style="width: 155px; vertical-align: middle; margin-right: 10px;">Done<br>Read</a>
+	        </div>
+        </main>
+        <script src="../js/user.js"></script>
+        <script>
+        const activeUser=getActiveUser();
+        if (!activeUser) window.location.href='login.html';
+        document.getElementById('username').textContent=activeUser.username;
+        </script>
+    </body>
+    <footer>
+        <p>&copy; 2025 Starry Reading Tracker | @starryread@gmail.com</p>
+    </footer>
+</html>

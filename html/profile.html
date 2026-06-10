@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>My Profile</title>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <header>
+            <img src="../assets/logo.png" style="width: 60px;">
+            <h1>Starry Reading Tracker</h1>
+            <img src="../assets/logo.png" style="width: 60px;">
+        </header>
+        <nav>
+            <a href="homepage.html">Home |</a>
+            <a href="author.html">Search Author |</a>
+            <a href="finduser.html">Find User |</a>
+            <a href="readinglist.html">Reading List |</a>
+            <a href="doneread.html">Done Read |</a>
+            <a href="profile.html">My Profile |</a>
+            <a href="#" onclick="logout()">Logout</a>
+        </nav>
+        <main>
+            <div id="profileContainer" style="display:flex; flex-direction:column; gap:20px;"></div>
+        </main>
+        <div id="bioModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:#0000;justify-content:center;align-items:center;">
+            <div style="background:white;padding:20px;border-radius:8px;max-width:400px;width:90%;">
+                <h3>Edit Bio</h3>
+                <textarea id="bioInput" rows="4" style="width:100%;"></textarea><br><br>
+                <button id="saveBioBtn">Save</button>
+                <button id="cancelBioBtn">Cancel</button>
+            </div>
+        </div>
+        <script src="../js/user.js"></script>
+        <script src="../js/profile.js"></script>
+    </body>
+    <footer>
+        <p>&copy; 2025 Starry Reading Tracker | @starryread@gmail.com</p>
+    </footer>
+</html>
